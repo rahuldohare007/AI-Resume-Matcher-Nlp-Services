@@ -1,0 +1,17 @@
+# Create render.yaml
+@"
+services:
+  - type: web
+    name: ai-resume-nlp-service
+    runtime: python
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt --timeout 1000
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port `$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: ENVIRONMENT
+        value: production
+"@ | Out-File -FilePath render.yaml -Encoding UTF8

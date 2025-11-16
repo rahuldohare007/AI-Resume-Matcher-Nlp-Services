@@ -1,26 +1,51 @@
-# Web Framework
-fastapi==0.120.0        # latest as of Oct 2025 :contentReference[oaicite:0]{index=0}
-uvicorn[standard]==0.38.0 # latest as of Oct 2025 :contentReference[oaicite:1]{index=1}
-python-multipart==0.0.20  # latest as of Dec 2024 :contentReference[oaicite:2]{index=2}
+# # Web Framework
+# fastapi==0.120.0        # latest as of Oct 2025 :contentReference[oaicite:0]{index=0}
+# uvicorn[standard]==0.38.0 # latest as of Oct 2025 :contentReference[oaicite:1]{index=1}
+# python-multipart==0.0.20  # latest as of Dec 2024 :contentReference[oaicite:2]{index=2}
 
-# NLP & ML
+# # NLP & ML
+# sentence-transformers==3.2.1
+# torch==2.9.0
+# transformers==4.45.2
+# scikit-learn==1.5.2
+# numpy==2.1.2
+
+
+# # Document Processing
+# PyMuPDF==1.26.0
+# python-docx==1.1.0
+# pdfplumber==0.10.3
+
+# # Text Processing
+# nltk==3.9
+# spacy==3.8.7
+
+# # Utilities
+# python-dotenv==1.0.0
+# pydantic==2.8.2
+# aiofiles==25.1.0
+
+
+# Web Framework
+fastapi==0.120.0
+uvicorn[standard]==0.38.0
+python-multipart==0.0.20
+
+# NLP & ML - Minimal versions
 sentence-transformers==3.2.1
-torch==2.9.0
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
 transformers==4.45.2
 scikit-learn==1.5.2
-numpy==2.1.2
-
+numpy==1.26.4
 
 # Document Processing
 PyMuPDF==1.26.0
 python-docx==1.1.0
-pdfplumber==0.10.3
 
 # Text Processing
 nltk==3.9
-spacy==3.8.7
 
 # Utilities
 python-dotenv==1.0.0
 pydantic==2.8.2
-aiofiles==25.1.0
